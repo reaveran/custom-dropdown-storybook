@@ -1,53 +1,62 @@
 {
   "name": "customize-dropdown",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "homepage": "https://reaveran.github.io/custom-dropdown-storybook",
+  "dependencies": {
+    "@types/node": "^16.18.104",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5"
+  },
   "scripts": {
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "predeploy-storybook": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static",
-    "start": "webpack --mode development"
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@babel/code-frame": "^7.24.7",
-    "@babel/core": "^7.24.7",
-    "@babel/preset-env": "^7.24.7",
-    "@babel/preset-react": "^7.24.7",
-    "@chromatic-com/storybook": "^1.6.0",
-    "@storybook/addon-essentials": "^8.1.11",
-    "@storybook/addon-interactions": "^8.1.11",
-    "@storybook/addon-links": "^8.1.11",
-    "@storybook/addon-onboarding": "^8.1.11",
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.4",
-    "@storybook/blocks": "^8.1.11",
-    "@storybook/react": "^8.1.11",
-    "@storybook/react-webpack5": "^8.1.11",
-    "@storybook/storybook-deployer": "^2.8.16",
-    "@storybook/test": "^8.1.11",
-    "babel-loader": "^9.1.3",
-    "css-loader": "^7.1.2",
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.2.6",
+    "@storybook/addon-interactions": "^8.2.6",
+    "@storybook/addon-links": "^8.2.6",
+    "@storybook/addon-onboarding": "^8.2.6",
+    "@storybook/addon-styling-webpack": "^1.0.0",
+    "@storybook/blocks": "^8.2.6",
+    "@storybook/preset-create-react-app": "^8.2.6",
+    "@storybook/react": "^8.2.6",
+    "@storybook/react-webpack5": "^8.2.6",
+    "@storybook/test": "^8.2.6",
+    "eslint-plugin-storybook": "^0.8.0",
     "gh-pages": "^6.1.1",
-    "html-webpack-plugin": "^5.6.0",
-    "prop-types": "^15.8.1",
-    "storybook": "^8.1.11",
-    "style-loader": "^4.0.0",
-    "tailwindcss": "^3.4.4",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "storybook": "^8.2.6",
+    "tailwindcss": "^3.4.7",
+    "webpack": "^5.93.0"
   }
 }
